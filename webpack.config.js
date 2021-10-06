@@ -80,6 +80,12 @@ module.exports = {
                 use: ['style-loader', 'css-loader'],
             },
             {
+                test: /\.js$/,
+                exclude: /node_modules(?!(\/|\\)pdfjs-dist)/,
+                loader: 'babel-loader',
+                
+            },
+            {
                 test: /\.(png|jpg|gif|svg|ttf)$/,
                 use: {
                     loader: 'file-loader',
