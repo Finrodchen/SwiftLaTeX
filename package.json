@@ -4,6 +4,9 @@
   "private": true,
   "description": "The Snack website",
   "main": "build/server",
+  "engines": {
+    "node": "14.x"
+  }
   "scripts": {
     "start": "if-env NODE_ENV=production && yarn start:prod || yarn start:dev",
     "start:dev": "nodemon -e json,js,ts,tsx --watch src/server src/server/index.tsx --exec babel-node --extensions '.ts,.tsx'",
